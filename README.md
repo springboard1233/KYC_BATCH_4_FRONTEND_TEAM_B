@@ -1,1 +1,7 @@
-# KYC_BATCH_4_FRONTEND_TEAM_B
+`react-router` is the primary package in the React Router project.
+
+## Installation
+
+```sh
+npm i react-router
+```
