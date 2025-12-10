@@ -15,7 +15,8 @@
   padding-bottom: 40px;
 }
 
-nav {
+/* ---------- NAVBAR ---------- */
+.upload-nav {
   background: rgba(0, 0, 0, 0.7);
   border-bottom: 2px solid rgba(0, 255, 255, 0.3);
   box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
@@ -27,7 +28,7 @@ nav {
   transition: 0.3s ease;
 }
 
-nav .logo {
+.upload-nav .logo {
   font-weight: 700;
   font-size: 24px;
   color: #00e6e6;
@@ -35,24 +36,75 @@ nav .logo {
   letter-spacing: 1px;
 }
 
-nav .nav-links {
+.upload-nav .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   align-items: center;
 }
 
-nav a {
+/* base link / button style for nav */
+.upload-nav .nav-link {
+  background: transparent;
+  border: none;
+  color: #b3e5e5;
+  font-size: 15px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.upload-nav .nav-link:hover {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  background: rgba(0, 255, 255, 0.04);
+}
+
+/* if you still have anchor tags inside nav, keep this */
+.upload-nav a {
   color: #b3e5e5;
   text-decoration: none;
   font-size: 15px;
   transition: 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 10px;
 }
 
-nav a:hover {
+.upload-nav a:hover {
   color: #00ffff;
   text-shadow: 0 0 10px #00ffff;
+  background: rgba(0, 255, 255, 0.04);
 }
 
+/* button-like links (theme variations) */
+.btn-yellow {
+  background: linear-gradient(45deg, #00e6e6, #007bff);
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 14px;
+  box-shadow: 0 0 18px rgba(0, 200, 255, 0.12);
+  border-radius: 10px;
+}
+
+.btn-green2 {
+  background: linear-gradient(45deg, #00b894, #00e6a8);
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 10px;
+  box-shadow: 0 0 18px rgba(0, 200, 170, 0.12);
+}
+
+.btn-blue2 {
+  background: linear-gradient(45deg, #0984e3, #00a8ff);
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 10px;
+  box-shadow: 0 0 18px rgba(0, 160, 255, 0.12);
+}
+
+/* logout button */
 .btn-logout {
   background: linear-gradient(45deg, #b81d42, #ff4b5c);
   color: #fff;
@@ -70,8 +122,9 @@ nav a:hover {
   box-shadow: 0 0 45px rgba(255, 75, 92, 0.6);
 }
 
+/* ---------- MAIN CONTAINER ---------- */
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 60px auto;
   background: rgba(0, 0, 0, 0.7);
   border: 2px solid rgba(0, 255, 255, 0.3);
@@ -91,17 +144,19 @@ nav a:hover {
   font-weight: 700;
   color: #00e6e6;
   text-align: center;
-  margin-bottom: 30px;
+  margin: 30px 0 10px;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
 
+/* form grid */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
 }
 
-input, select {
+input,
+select {
   width: 100%;
   padding: 15px 15px;
   border-radius: 12px;
@@ -124,6 +179,7 @@ select:focus {
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
 }
 
+/* upload area */
 .upload-box {
   margin-top: 30px;
   border: 2px dashed rgba(0, 255, 255, 0.4);
@@ -149,6 +205,7 @@ select:focus {
   border: 1px solid rgba(0, 255, 255, 0.4);
 }
 
+/* button row and buttons */
 .btn-row {
   margin-top: 35px;
   display: flex;
@@ -163,7 +220,7 @@ select:focus {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  color: #fff;
+  color: #ffffff;
   transition: 0.4s ease;
 }
 
@@ -188,6 +245,74 @@ select:focus {
   box-shadow: 0 0 45px rgba(0, 255, 255, 0.6);
 }
 
+/* small button variants used in navbar */
+.nav-links .btn-green2,
+.nav-links .btn-blue2,
+.nav-links .btn-yellow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------- EXTRACTED DATA PANEL ---------- */
+.extracted-data {
+  margin-top: 20px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.55));
+  border: 1px solid rgba(0,255,255,0.12);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(0,255,255,0.06);
+}
+
+.extracted-data h3 {
+  color: #00e6e6;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.extracted-data p {
+  color: #dfefff;
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+/* Raw OCR area */
+details {
+  margin-top: 12px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid rgba(0,255,255,0.06);
+}
+
+details summary {
+  cursor: pointer;
+  color: #bfeff0;
+  font-weight: 600;
+  outline: none;
+}
+
+details pre {
+  margin-top: 10px;
+  max-height: 300px;
+  overflow: auto;
+  background: rgba(0,0,0,0.6);
+  border-radius: 6px;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.03);
+  color: #e6f7f7;
+  font-size: 13px;
+  line-height: 1.35;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.section-small {
+  font-size: 13px;
+  color: #b3e5e5;
+}
+
+/* footer */
 .footer-text {
   margin-top: 40px;
   text-align: center;
@@ -205,6 +330,7 @@ select:focus {
   color: #00ffff;
 }
 
+/* ---------- SELECT STYLES ---------- */
 select {
   width: 100%;
   padding: 15px 15px;
@@ -212,7 +338,7 @@ select {
   border: none;
   background: rgba(255, 255, 255, 0.05);
   border-bottom: 2px solid #00e6e6;
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   outline: none;
   transition: 0.3s ease;
@@ -243,4 +369,42 @@ select {
 
 select::-ms-expand {
   display: none;
+}
+
+/* ---------- SMALL / MOBILE RESPONSIVENESS ---------- */
+@media (max-width: 880px) {
+  .upload-nav {
+    padding: 12px 20px;
+  }
+  .container {
+    margin: 30px 18px;
+    padding: 28px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav-links {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .upload-box {
+    padding: 30px;
+  }
+  .upload-box img {
+    max-height: 160px;
+  }
+  .btn {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+/* ---------- ACCESSIBILITY / FOCUS ---------- */
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 30px rgba(0,255,255,0.12);
+  border-radius: 8px;
 }
